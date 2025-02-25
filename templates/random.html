@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {box-sizing: border-box;}
+    .row {display: flex;}
+    .column {flex: 50%;padding: 5px;}
+    .cell {text-align: center; padding-top: 5px; padding-bottom: 5px}
+  </style>
+  <title>MK Generator</title>
+<body>
+<h1>MK Generator</h1>
+<p>
+  On refresh this page will select 4 random tracks. Once those tracks have been "selected" they will be removed from the pool of available tracks
+</p>
+<p>
+  If there are insufficient remaining tracks then all tracks are automatically reloaded. This will ensure that ALL tracks are selected once before reloading
+</p>
+<p>
+  <a href="/reload"><button type="button">Reset Selected Tracks!</button></a>
+</p>
+<h3>
+  Selected Tracks
+</h3>
+<table style="width:50%">
+  <tr>
+    <th>Cup</th>
+    <th>Track</th>
+  </tr>
+  {{ range .Tracks }}
+  <tr>
+    <td>
+      <div class="cell">
+        {{ .Cup }}
+      </div>
+    </td>
+    <td>
+      <div class="cell">
+        <img alt="{{ .Name }}" height="122" src="{{ .TrackImage }}" width="217">
+      </div>
+      <div class="cell">
+        {{ .Name }}
+      </div>
+    </td>
+  </tr>
+  {{ end }}
+</table>
+
+<div class="row">
+  <div class="column">
+    <h3>
+      Remaining Tracks
+    </h3>
+    <table style="width:100%">
+      <tr>
+        <th>Cup</th>
+        <th>Track</th>
+      </tr>
+      {{ range .RemainingTracks }}
+      <tr>
+        <td>
+          <div class="cell">
+            {{ .Cup }}
+          </div>
+        </td>
+        <td>
+          <div class="cell">
+            {{ .Name }}
+          </div>
+        </td>
+      </tr>
+      {{ end }}
+    </table>
+  </div>
+  <div class="column">
+    <h3>
+      Previously Selected Tracks
+    </h3>
+    <table style="width:100%">
+      <tr>
+        <th>Cup</th>
+        <th>Track</th>
+      </tr>
+      {{ range .SelectedTracks }}
+      <tr>
+        <td>
+          <div class="cell">
+            {{ .Cup }}
+          </div>
+        </td>
+        <td>
+          <div class="cell">
+            {{ .Name }}
+          </div>
+        </td>
+      </tr>
+      {{ end }}
+    </table>
+  </div>
+</div>
+</body>
+</html>
