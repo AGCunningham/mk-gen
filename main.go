@@ -9,11 +9,18 @@ import (
 )
 
 func init() {
+	// check for a track file override
+	trackFile := os.Getenv(selector.TrackEnvVar)
+	if trackFile != "" {
+		selector.TracksYamlFilePath = trackFile
+	}
+	fmt.Printf("tracks to be loaded from \"%s\"\n", selector.TracksYamlFilePath)
+
 	// Load all tracks into memory on initialisation
 	err := selector.LoadTracks()
 	if err != nil {
 		// no benefit to catching an error that failed to be written
-		_, _ = fmt.Fprintf(os.Stderr, "failed to load tracks: %v", err)
+		_, _ = fmt.Fprintf(os.Stderr, "failed to load tracks: %v\n", err)
 		os.Exit(1)
 	}
 }

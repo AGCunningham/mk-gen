@@ -6,7 +6,9 @@ import (
 	"os"
 )
 
-const TracksYamlFilePath = "./static/tracks.yaml"
+const (
+	TrackEnvVar = "MK_GEN_TRACK_FILE"
+)
 
 type Track struct {
 	Name       string `yaml:"name"`
@@ -20,6 +22,10 @@ var (
 
 	// SelectedTracks contains tracks which have been previously selected
 	SelectedTracks []Track
+
+	// TracksYamlFilePath is the path to the YAML file containing the track data
+	// can be overridden by the `TrackEnvVar` environment variable
+	TracksYamlFilePath = "./static/tracks.yaml"
 )
 
 func LoadTracks() error {
