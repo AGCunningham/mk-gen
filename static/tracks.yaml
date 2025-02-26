@@ -1,0 +1,289 @@
+tracks:
+  - cup: Mushroom
+    name: Mario Kart Stadium
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/1-1.jpg"
+  - cup: Mushroom
+    name: Water Park
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/1-2.jpg"
+  - cup: Mushroom
+    name: Sweet Sweet Canyon
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/1-3.jpg"
+  - cup: Mushroom
+    name: Thwomp Ruins
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/1-4.jpg"
+  - cup: Flower
+    name: Mario Circuit
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/2-1.jpg"
+  - cup: Flower
+    name: Toad Harbor
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/2-2.jpg"
+  - cup: Flower
+    name: Twisted Mansion
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/2-3.jpg"
+  - cup: Flower
+    name: Shy Guy Falls
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/2-4.jpg"
+  - cup: Star
+    name: Sunshine Airport
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/3-1.jpg"
+  - cup: Star
+    name: Dolphin Shoals
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/3-2.jpg"
+  - cup: Star
+    name: Electrodrome
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/3-3.jpg"
+  - cup: Star
+    name: Mount Wario
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/3-4.jpg"
+  - cup: Special
+    name: Cloudtop Cruise
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/4-1.jpg"
+  - cup: Special
+    name: Bone-Dry Dunes
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/4-2.jpg"
+  - cup: Special
+    name: Bowser's Castle
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/4-3.jpg"
+  - cup: Special
+    name: Rainbow Road
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/4-4.jpg"
+  - cup: Shell
+    name: Wii Moo Moo Meadows
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/5-1.jpg"
+  - cup: Shell
+    name: GBA Mario Circuit
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/5-2.jpg"
+  - cup: Shell
+    name: DS Cheep Cheep Beach
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/5-3.jpg"
+  - cup: Shell
+    name: N64 Toad's Turnpike
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/5-4.jpg"
+  - cup: Banana
+    name: GCN Dry Dry Desert
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/6-1.jpg"
+  - cup: Banana
+    name: SNES Donut Plains 3
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/6-2.jpg"
+  - cup: Banana
+    name: N64 Royal Raceway
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/6-3.jpg"
+  - cup: Banana
+    name: 3DS DK Jungle
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/6-4.jpg"
+  - cup: Leaf
+    name: DS Wario Stadium
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/7-1.jpg"
+  - cup: Leaf
+    name: GCN Sherbet Land
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/7-2.jpg"
+  - cup: Leaf
+    name: 3DS Music Park
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/7-3.jpg"
+  - cup: Leaf
+    name: N64 Yoshi Valley
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/7-4.jpg"
+  - cup: Lightning
+    name: DS Tick-Tock Clock
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/8-1.jpg"
+  - cup: Lightning
+    name: 3DS Piranha Plant Slide
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/8-2.jpg"
+  - cup: Lightning
+    name: Wii Grumble Volcano
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/8-3.jpg"
+  - cup: Lightning
+    name: N64 Rainbow Road
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/8-4.jpg"
+  - cup: Egg
+    name: GCN Yoshi Circuit
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/9-1.jpg"
+  - cup: Egg
+    name: Excitebike Arena
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/9-2.jpg"
+  - cup: Egg
+    name: Dragon Driftway
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/9-3.jpg"
+  - cup: Egg
+    name: Mute City
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/9-4.jpg"
+  - cup: Triforce
+    name: Wii Wario's Gold Mine
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/10-1.jpg"
+  - cup: Triforce
+    name: SNES Rainbow Road
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/10-2.jpg"
+  - cup: Triforce
+    name: Ice Ice Outpost
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/10-3.jpg"
+  - cup: Triforce
+    name: Hyrule Circuit
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/10-4.jpg"
+  - cup: Crossing
+    name: GCN Baby Park
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/11-1.jpg"
+  - cup: Crossing
+    name: GBA Cheese Land
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/11-2.jpg"
+  - cup: Crossing
+    name: Wild Woods
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/11-3.jpg"
+  - cup: Crossing
+    name: Animal Crossing
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/11-4.jpg"
+  - cup: Bell
+    name: 3DS Neo Bowser City
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/12-1.jpg"
+  - cup: Bell
+    name: GBA Ribbon Road
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/12-2.jpg"
+  - cup: Bell
+    name: Super Bell Subway
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/12-3.jpg"
+  - cup: Bell
+    name: Big Blue
+    img: "https://www.nintendo.com/sg/switch/aabp/assets/images/course/thumbnail/12-4.jpg"
+  - cup: Golden Dash
+    name: Paris Promenade
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/paris-promenade.jpg"
+  - cup: Golden Dash
+    name: Toad Circuit
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/toad-circuit.jpg"
+  - cup: Golden Dash
+    name: Choco Mountain
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/choco-mountain.jpg"
+  - cup: Golden Dash
+    name: Coconut Mall
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/coconut-mall.jpg"
+  - cup: Lucky Cat
+    name: Tokyo Blur
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/tokyo-blur.jpg"
+  - cup: Lucky Cat
+    name: Shroom Ridge
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/shroom-ridge.jpg"
+  - cup: Lucky Cat
+    name: Sky Garden
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/sky-garden.jpg"
+  - cup: Lucky Cat
+    name: Ninja Hideaway
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/ninja-hideaway.jpg"
+  - cup: Turnip
+    name: New York Minute
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/new-york-minute.jpg"
+  - cup: Turnip
+    name: Mario Circuit 3
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/mario-circuit-3.jpg"
+  - cup: Turnip
+    name: Kalimari Desert
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/kalimari-desert.jpg"
+  - cup: Turnip
+    name: Waluigi Pinball
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/waluigi-pinball.jpg"
+  - cup: Propeller
+    name: Sydney Sprint
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/sydney-sprint.jpg"
+  - cup: Propeller
+    name: Snow Land
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/snow-land.jpg"
+  - cup: Propeller
+    name: Mushroom Gorge
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/mushroom-gorge.jpg"
+  - cup: Propeller
+    name: Sky-High Sundae
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/sky-high-sundae.jpg"
+  - cup: Rock
+    name: London Loop
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/london-loop.jpg"
+  - cup: Rock
+    name: Boo Lake
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/boo-lake.jpg"
+  - cup: Rock
+    name: Rock Rock Mountain
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/rock-rock-mountain.jpg"
+  - cup: Rock
+    name: Maple Treeway
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/maple-treeway.jpg"
+  - cup: Moon
+    name: Berlin Byways
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/berlin-byways.jpg"
+  - cup: Moon
+    name: Peach Gardens
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/peach-gardens.jpg"
+  - cup: Moon
+    name: Merry Mountain
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/merry-mountain.jpg"
+  - cup: Moon
+    name: Rainbow Road
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/rainbow-road.jpg"
+  - cup: Fruit
+    name: Amsterdam Drift
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/amsterdam-drift.jpg"
+  - cup: Fruit
+    name: Riverside Park
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/riverside-park.jpg"
+  - cup: Fruit
+    name: DK Summit
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/dk-summit.jpg"
+  - cup: Fruit
+    name: Yoshi’s Island
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/yoshis-island.jpg"
+  - cup: Boomerang
+    name: Bangkok Rush
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/bangkok-rush.jpg"
+  - cup: Boomerang
+    name: Mario Circuit
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/mario-circuit.jpg"
+  - cup: Boomerang
+    name: Waluigi Stadium
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/waluigi-stadium.jpg"
+  - cup: Boomerang
+    name: Singapore Speedway
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/singapore-speedway.jpg"
+  - cup: Feather
+    name: Athens Dash
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/athens-dash.jpg"
+  - cup: Feather
+    name: Daisy Cruiser
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/daisy-cruiser.jpg"
+  - cup: Feather
+    name: Moonview Highway
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/moonview-highway.jpg"
+  - cup: Feather
+    name: Squeaky Clean Sprint
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/squeaky-clean-sprint.jpg"
+  - cup: Cherry
+    name: Los Angeles Laps
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/los-angeles-laps.jpg"
+  - cup: Cherry
+    name: Sunset Wilds
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/sunset-wilds.jpg"
+  - cup: Cherry
+    name: Koopa Cape
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/koopa-cape-2x.jpg"
+  - cup: Cherry
+    name: Vancouver Velocity
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/vancouver-velocity.jpg"
+  - cup: Acorn
+    name: Rome Avanti
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/rome-avanti.jpg"
+  - cup: Acorn
+    name: DK Mountain
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/dk-mountain.jpg"
+  - cup: Acorn
+    name: Daisy Circuit
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/daisy-circuit.jpg"
+  - cup: Acorn
+    name: Piranha Plant Cove
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/piranha-plant-cove.jpg"
+  - cup: Spiny
+    name: Madrid Drive
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/madrid-drive.jpg"
+  - cup: Spiny
+    name: Rosalina's Ice World
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/rosalinas-ice-world.jpg"
+  - cup: Spiny
+    name: Bowser Castle 3
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/bowsers-castle-3-2x.jpg"
+  - cup: Spiny
+    name: Rainbow Road
+    img: "https://mariokart8.nintendo.com/assets/img/booster/courses/rainbow-road-wii-2x.jpg"
