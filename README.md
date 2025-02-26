@@ -7,9 +7,10 @@
 
 The following options can be configured via environment variables
 
-| Env Var             | Default                | Description                                                            |
-|---------------------|------------------------|------------------------------------------------------------------------|
-| `MK_GEN_TRACK_FILE` | `./static/tracks.yaml` | Path to the YAML file containing the data on the tracks to select from |
+| Env Var               | Default                | Description                                                            |
+|-----------------------|------------------------|------------------------------------------------------------------------|
+| `MK_GEN_TRACK_FILE`   | `./static/tracks.yaml` | Path to the YAML file containing the data on the tracks to select from |
+| `MK_GEN_TEMPLATE_DIR` | `./templates/`         | Directory containing the webserver HTML templates                      |
 
 ## Development
 

@@ -23,11 +23,17 @@ func init() {
 		_, _ = fmt.Fprintf(os.Stderr, "failed to load tracks: %v\n", err)
 		os.Exit(1)
 	}
+
+	// set the template dir
+	templateDir := os.Getenv(webserver.TemplateDirEnvVar)
+	if templateDir != "" {
+		webserver.TemplateDir = templateDir
+	}
 }
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		err := webserver.LoadRenderAndWrite("root", "./templates/root.html", w, nil)
+		err := webserver.LoadRenderAndWrite("root", w, nil)
 		if err != nil {
 			webserver.PrintAndReturnError(err, w)
 		}
@@ -39,7 +45,7 @@ func main() {
 			webserver.PrintAndReturnError(err, w)
 		}
 
-		err = webserver.LoadRenderAndWrite("random", "./templates/random.html", w, struct {
+		err = webserver.LoadRenderAndWrite("random", w, struct {
 			Tracks          []selector.Track
 			RemainingTracks []selector.Track
 			SelectedTracks  []selector.Track
@@ -65,7 +71,7 @@ func main() {
 			redirectTarget = "/"
 		}
 
-		err = webserver.LoadRenderAndWrite("reload", "./templates/reload.html", w, struct {
+		err = webserver.LoadRenderAndWrite("reload", w, struct {
 			Referer string
 		}{
 			Referer: redirectTarget,

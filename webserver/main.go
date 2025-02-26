@@ -5,9 +5,21 @@ import (
 	"html/template"
 	"net/http"
 	"os"
+	"path"
 )
 
-func LoadRenderAndWrite(templateName, templatePath string, w http.ResponseWriter, data any) error {
+const (
+	TemplateDirEnvVar = "MK_GEN_TEMPLATE_DIR"
+)
+
+var (
+	TemplateDir = "./templates/"
+)
+
+func LoadRenderAndWrite(templateName string, w http.ResponseWriter, data any) error {
+	// set the path to the template
+	templatePath := fmt.Sprintf("%s.html", path.Join(TemplateDir, templateName))
+
 	tpl, err := os.ReadFile(templatePath)
 	if err != nil {
 		return fmt.Errorf("failed to open template '%s': %v", templateName, err)
