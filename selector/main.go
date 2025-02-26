@@ -10,6 +10,7 @@ func SelectTracksAndRemove(numberOfTracks int) ([]Track, error) {
 	// Create and seed the generator.
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
 
+	// FIXME: this will skip some tracks as it reloads before selecting the final unselects tracks
 	// if there are not sufficient unloaded tracks reload all tracks again
 	if val := len(AllTracks); val < numberOfTracks {
 		fmt.Printf("require \"%d\" unselected tracks, only \"%d\" remain so reloading...\n", numberOfTracks, val)

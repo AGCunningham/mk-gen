@@ -39,6 +39,7 @@ func main() {
 		}
 	})
 
+	// TODO: allow the number of tracks to be input as you generally input 1 track at a time
 	http.HandleFunc("/random", func(w http.ResponseWriter, r *http.Request) {
 		tracks, err := selector.SelectTracksAndRemove(4)
 		if err != nil {
