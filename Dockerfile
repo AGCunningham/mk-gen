@@ -1,4 +1,5 @@
-FROM golang:1.24 AS build
+# this needs to be build on an image that support linux/arm/v6 which is what the RaspberryPi uses
+FROM golang:1.24-alpine AS build
 
 WORKDIR /mk-gen
 COPY go.mod go.sum ./
@@ -6,7 +7,7 @@ RUN go mod download
 
 COPY . .
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o server github.com/AGCunningham/mk-gen
+RUN CGO_ENABLED=0 go build -o server github.com/AGCunningham/mk-gen
 
 FROM scratch
 

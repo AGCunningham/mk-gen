@@ -254,3 +254,5 @@ modules.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/go,intellij,intellij+iml,intellij+all
 
+# account for any Docker images built
+*.tar
