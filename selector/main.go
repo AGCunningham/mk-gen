@@ -6,6 +6,15 @@ import (
 	"time"
 )
 
+func LoadAll() error {
+	err := loadTracks()
+	if err != nil {
+		return fmt.Errorf("failed to load tracks: %v\n", err)
+	}
+
+	return nil
+}
+
 func SelectTracksAndRemove(numberOfTracks int) ([]Track, error) {
 	// Create and seed the generator.
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
@@ -13,7 +22,7 @@ func SelectTracksAndRemove(numberOfTracks int) ([]Track, error) {
 	// if there are not sufficient unloaded tracks reload all tracks again
 	if val := len(AllTracks); val < numberOfTracks {
 		fmt.Printf("require \"%d\" unselected tracks, only \"%d\" remain so reloading...\n", numberOfTracks, val)
-		err := LoadTracks()
+		err := loadTracks()
 		if err != nil {
 			return []Track{}, fmt.Errorf("failed to reload tracks: %v", err)
 		}

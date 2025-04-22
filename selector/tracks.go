@@ -28,7 +28,7 @@ var (
 	TracksYamlFilePath = "./static/tracks.yaml"
 )
 
-func LoadTracks() error {
+func loadTracks() error {
 	yamlFile, err := os.ReadFile(TracksYamlFilePath)
 	if err != nil {
 		return err

@@ -16,11 +16,11 @@ func init() {
 	}
 	fmt.Printf("tracks to be loaded from \"%s\"\n", selector.TracksYamlFilePath)
 
-	// Load all tracks into memory on initialisation
-	err := selector.LoadTracks()
+	// Load all karts & tracks into memory on initialisation
+	err := selector.LoadAll()
 	if err != nil {
 		// no benefit to catching an error that failed to be written
-		_, _ = fmt.Fprintf(os.Stderr, "failed to load tracks: %v\n", err)
+		_, _ = fmt.Fprintf(os.Stderr, "failed to load data: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -39,13 +39,13 @@ func main() {
 		}
 	})
 
-	http.HandleFunc("/random", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/random-tracks", func(w http.ResponseWriter, r *http.Request) {
 		tracks, err := selector.SelectTracksAndRemove(4)
 		if err != nil {
 			webserver.PrintAndReturnError(err, w)
 		}
 
-		err = webserver.LoadRenderAndWrite("random", w, struct {
+		err = webserver.LoadRenderAndWrite("random-tracks", w, struct {
 			Tracks          []selector.Track
 			RemainingTracks []selector.Track
 			SelectedTracks  []selector.Track
@@ -60,7 +60,7 @@ func main() {
 	})
 
 	http.HandleFunc("/reload", func(w http.ResponseWriter, r *http.Request) {
-		err := selector.LoadTracks()
+		err := selector.LoadAll()
 		if err != nil {
 			webserver.PrintAndReturnError(err, w)
 		}
