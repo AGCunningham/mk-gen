@@ -6,10 +6,31 @@ import (
 	"time"
 )
 
+const (
+	PlayerCountQueryParam = "player-count"
+)
+
+type Player struct {
+	Character string
+	Kart      string
+	Wheels    string
+	Glider    string
+}
+
 func LoadAll() error {
-	err := loadTracks()
-	if err != nil {
-		return fmt.Errorf("failed to load tracks: %v\n", err)
+	sources := map[string]func() error{
+		"tracks":     loadTracks,
+		"karts":      loadKarts,
+		"characters": loadCharacters,
+		"tyres":      loadTyres,
+		"gliders":    loadGliders,
+	}
+
+	for typeName, f := range sources {
+		err := f()
+		if err != nil {
+			return fmt.Errorf("failed to load %s: %v\n", typeName, err)
+		}
 	}
 
 	return nil
@@ -47,4 +68,23 @@ func SelectTracksAndRemove(numberOfTracks int) ([]Track, error) {
 	SelectedTracks = append(SelectedTracks, selectedTracks...)
 
 	return selectedTracks, nil
+}
+
+func SelectPlayers(numberOfPlayers int) ([]*Player, error) {
+	// Create and seed the generator.
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+
+	var players []*Player
+
+	for range numberOfPlayers {
+		// FIXME: ought to have some validation to make sure that the variables exist
+		players = append(players, &Player{
+			Character: AllCharacters[r.Intn(len(AllCharacters))].Name,
+			Kart:      AllKarts[r.Intn(len(AllKarts))].Name,
+			Wheels:    AllTyres[r.Intn(len(AllTyres))].Name,
+			Glider:    AllGliders[r.Intn(len(AllGliders))].Name,
+		})
+	}
+
+	return players, nil
 }

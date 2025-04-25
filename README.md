@@ -59,4 +59,5 @@ and then on the target
 ```shell
 docker load -i ${TARGET_DIRECTORY}/mk-gen/mk-gen-v-0-1-0.tar
 docker run -p 80:8080 --name mk-gen -d mk-gen:v0.1.0
+rm -r ${TARGET_DIRECTORY}/mk-gen/mk-gen-v-0-1-0.tar
 ```

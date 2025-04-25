@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    * {box-sizing: border-box;}
+    .row {display: flex;padding: 5px}
+    .column {flex: 50%;padding: 5px;}
+    .cell {text-align: center; padding-top: 5px; padding-bottom: 5px}
+  </style>
+  <title>MK Generator</title>
+<body>
+<h1>MK Generator</h1>
+<p>
+  On refresh this page will select a random character for the user to play. Configuration is not reset between selections
+</p>
+<h3>
+  Player Selector
+</h3>
+
+<div class="row">
+  <button class="cell" onclick="location.href ='/random-player?player-count=1'">1</button>
+  <button class="cell" onclick="location.href ='/random-player?player-count=2'">2</button>
+  <button class="cell" onclick="location.href ='/random-player?player-count=3'">3</button>
+  <button class="cell" onclick="location.href ='/random-player?player-count=4'">4</button>
+</div>
+
+<h3>
+  Selected Players
+</h3>
+
+<div class="row">
+  <table style="width:50%">
+    <tr>
+      <th>Character</th>
+      <th>Kart</th>
+      <th>Wheels</th>
+      <th>Glider</th>
+    </tr>
+    {{ range .Players }}
+    <tr>
+      <td>
+        <!-- TODO: look at adding images like I do for track -->
+        <div class="cell">
+          {{ .Character }}
+        </div>
+      </td>
+      <td>
+        <div class="cell">
+          {{ .Kart }}
+        </div>
+      </td>
+      <td>
+        <div class="cell">
+          {{ .Wheels }}
+        </div>
+      </td>
+      <td>
+        <div class="cell">
+          {{ .Glider }}
+        </div>
+      </td>
+    </tr>
+    {{ end }}
+  </table>
+</div>
+
+</body>
+</html>

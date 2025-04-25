@@ -6,6 +6,7 @@ import (
 	"github.com/AGCunningham/mk-gen/webserver"
 	"net/http"
 	"os"
+	"strconv"
 )
 
 func init() {
@@ -15,6 +16,30 @@ func init() {
 		selector.TracksYamlFilePath = trackFile
 	}
 	fmt.Printf("tracks to be loaded from \"%s\"\n", selector.TracksYamlFilePath)
+	// check for a characters file override
+	characterFile := os.Getenv(selector.CharacterEnvVar)
+	if characterFile != "" {
+		selector.CharactersCsvFilePath = characterFile
+	}
+	fmt.Printf("characters to be loaded from \"%s\"\n", selector.CharactersCsvFilePath)
+	// check for a gliders file override
+	gliderFile := os.Getenv(selector.GliderEnvVar)
+	if gliderFile != "" {
+		selector.GlidersCsvFilePath = gliderFile
+	}
+	fmt.Printf("gliders to be loaded from \"%s\"\n", selector.GlidersCsvFilePath)
+	// check for a karts file override
+	kartFile := os.Getenv(selector.KartEnvVar)
+	if kartFile != "" {
+		selector.KartsCsvFilePath = kartFile
+	}
+	fmt.Printf("karts to be loaded from \"%s\"\n", selector.KartsCsvFilePath)
+	// check for a tyre file override
+	tyreFile := os.Getenv(selector.TyreEnvVar)
+	if tyreFile != "" {
+		selector.TyresCsvFilePath = tyreFile
+	}
+	fmt.Printf("tyres to be loaded from \"%s\"\n", selector.TyresCsvFilePath)
 
 	// Load all karts & tracks into memory on initialisation
 	err := selector.LoadAll()
@@ -53,6 +78,30 @@ func main() {
 			Tracks:          tracks,
 			RemainingTracks: selector.AllTracks,
 			SelectedTracks:  selector.SelectedTracks,
+		})
+		if err != nil {
+			webserver.PrintAndReturnError(err, w)
+		}
+	})
+
+	http.HandleFunc("/random-player", func(w http.ResponseWriter, r *http.Request) {
+		// fetch the player count from the
+		params := r.URL.Query()
+		count, err := strconv.Atoi(params.Get(selector.PlayerCountQueryParam))
+		if err != nil {
+			// default count to 4 if there are any errors
+			count = 4
+		}
+
+		players, err := selector.SelectPlayers(count)
+		if err != nil {
+			webserver.PrintAndReturnError(err, w)
+		}
+
+		err = webserver.LoadRenderAndWrite("random-player", w, struct {
+			Players []*selector.Player
+		}{
+			Players: players,
 		})
 		if err != nil {
 			webserver.PrintAndReturnError(err, w)
