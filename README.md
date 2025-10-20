@@ -26,6 +26,7 @@ The following options can be configured via environment variables
 |-----------------------|------------------------|------------------------------------------------------------------------|
 | `MK_GEN_TRACK_FILE`   | `./static/tracks.yaml` | Path to the YAML file containing the data on the tracks to select from |
 | `MK_GEN_TEMPLATE_DIR` | `./templates/`         | Directory containing the webserver HTML templates                      |
+| `MK_GEN_PORT`         | `8080`                 | The port to use for the mk-gen webserver                               |
 
 ## Development
 
@@ -41,6 +42,26 @@ go run github.com/AGCunnigham/mk-gen
 > If running locally then the port `8080` must be included in any URLs
 
 ## Other Notes
+
+### Multi Arch Builds
+```sh
+VERSION="v0.1.0"
+docker buildx build \
+  --push \
+  --platform linux/arm64,linux/amd64,linux/amd64/v2 \
+  --tag ghcr.io/agcunningham/mk-gen:${VERSION} .
+```
+
+and then to run
+
+```sh
+docker stop mk-gen
+docker run -ti -d --rm \
+    --net host \
+    --name mk-gen \
+    --env MK_GEN_PORT=3000 \
+    ghcr.io/agcunningham/mk-gen:${VERSION}
+```
 
 ### Copying Image to Network Limited Devices
 

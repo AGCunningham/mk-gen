@@ -2,11 +2,21 @@ package main
 
 import (
 	"fmt"
-	"github.com/AGCunningham/mk-gen/selector"
-	"github.com/AGCunningham/mk-gen/webserver"
 	"net/http"
 	"os"
 	"strconv"
+
+	"github.com/AGCunningham/mk-gen/selector"
+	"github.com/AGCunningham/mk-gen/webserver"
+)
+
+const (
+	serverPortEnvVar  = "MK_GEN_PORT"
+	defaultServerPort = "8080"
+)
+
+var (
+	serverPort string
 )
 
 func init() {
@@ -53,6 +63,12 @@ func init() {
 	templateDir := os.Getenv(webserver.TemplateDirEnvVar)
 	if templateDir != "" {
 		webserver.TemplateDir = templateDir
+	}
+
+	// set the port
+	serverPort = os.Getenv(serverPortEnvVar)
+	if serverPort == "" {
+		serverPort = defaultServerPort
 	}
 }
 
@@ -130,7 +146,8 @@ func main() {
 		}
 	})
 
-	err := http.ListenAndServe(":8080", nil)
+	port := fmt.Sprintf(":%s", serverPort)
+	err := http.ListenAndServe(port, nil)
 	if err != nil {
 		// no benefit to catching an error that failed to be written
 		_, _ = fmt.Fprintf(os.Stderr, "failed to start webserver: %v\n", err)
