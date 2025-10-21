@@ -1,0 +1,33 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: mk-gen
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/AGCunningham/mk-gen.git
+      revision: server-onboarding # HEAD # TODO: swap back before merging
+      directories:
+      - path: env/*
+  template:
+    metadata:
+      name: mk-gen-{{path.basename}}
+      annotations:
+        kargo.akuity.io/authorized-stage: mk-gen:{{path.basename}}
+    spec:
+      project: default
+      source:
+        path: charts/mk-gen
+        repoURL: https://github.com/AGCunningham/mk-gen.git
+        targetRevision: server-onboarding # 0.1.0 # FIXME: does this need to be set?
+        helm:
+          valueFiles:
+          - "/env/{{path.basename}}/values.yaml"
+      destination:
+        server: "https://kubernetes.default.svc"
+        namespace: mk-gen-{{path.basename}}
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true

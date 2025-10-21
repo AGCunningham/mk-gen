@@ -1,0 +1,43 @@
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: PromotionTask
+metadata:
+  name: promote
+  namespace: mk-gen
+spec:
+  vars:
+  - name: image
+    value: ghcr.io/agcunningham/mk-gen
+  - name: repoURL
+    value: https://github.com/AGCunningham/mk-gen.git
+  - name: branch
+    value: server-onboarding # main # TODO: swap back before merging (maybe use HEAD for consistency)
+  - name: envPath
+  - name: argocdApp
+
+  steps:
+  - uses: git-clone
+    config:
+      repoURL: ${{ vars.repoURL }}
+      checkout:
+      - branch: ${{ vars.branch }}
+        path: ./out
+  - uses: yaml-update
+    as: update-image
+    config:
+      path: ./out/${{ vars.envPath }}/values.yaml
+      updates:
+      - key: image.tag
+        value: ${{ imageFrom( vars.image ).Tag }}
+  - uses: git-commit
+    as: commit
+    config:
+      path: ./out
+      message: ${{ task.outputs['update-image'].commitMessage }}
+  - uses: git-push
+    config:
+      path: ./out
+  - uses: argocd-update
+    config:
+      apps:
+      - name: ${{ vars.argocdApp }}

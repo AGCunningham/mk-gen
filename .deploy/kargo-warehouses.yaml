@@ -1,0 +1,19 @@
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: mk-gen
+  namespace: mk-gen
+spec:
+  subscriptions:
+  - image:
+      repoURL: ghcr.io/agcunningham/mk-gen
+      # TODO: confirm this is what's expected/explore other options
+      imageSelectionStrategy: SemVer
+  - git:
+      repoURL: https://github.com/AGCunningham/mk-gen.git
+      commitSelectionStrategy: NewestFromBranch
+      branch: server-onboarding # main # TODO: swap back before merging (maybe use HEAD for consistency)
+      discoveryLimit: 10
+      includePaths:
+        - charts/mk-gen
