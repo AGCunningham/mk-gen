@@ -1,0 +1,11 @@
+image:
+  repository: ghcr.io/agcunningham/mk-gen
+  pullPolicy: IfNotPresent
+  tag: latest
+
+service:
+  port: 8080
+
+podAnnotations: {}
+
+resources: {}
