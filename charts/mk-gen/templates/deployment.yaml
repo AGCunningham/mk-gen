@@ -2,7 +2,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mk-gen
+  name: {{- include "mk-gen.name" . }}
+  namespace: {{ .Release.Namespace }}
   labels:
     {{- include "mk-gen.labels" . | nindent 4 }}
 spec:
