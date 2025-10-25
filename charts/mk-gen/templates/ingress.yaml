@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{- include "mk-gen.name" . }}
+  name: {{ include "mk-gen.name" . }}
   namespace: {{ .Release.Namespace }}
 spec:
   ingressClassName: cloudflare-tunnel
@@ -14,6 +14,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: {{- include "mk-gen.name" . }}
+            name: {{ include "mk-gen.name" . }}
             port:
               number: {{ .Values.service.port }}
